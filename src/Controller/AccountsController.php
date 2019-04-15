@@ -12,6 +12,7 @@ use App\Controller\AppController;
  */
 class AccountsController extends AppController
 {
+    
     /**
      * Index method
      *

@@ -45,20 +45,18 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth', [
+       /* $this->loadComponent('Auth', [
             'authenticate' => [
-                'Form' => [
-                    'fields' => [
-                        'username' => 'username',
-                        'password' => 'password'
-                    ]
-                ]
+               'Form' => [
+                  'fields' => ['username' => 'username', 'password' => 'password'],
+                  'userModel' => 'Accounts'
+               ],
             ],
-            'loginAction' => [
-                'controller' => 'Accounts',
-                'action' => 'login'
-            ]
-        ]);
+            'loginAction' => ['controller' => 'Accounts', 'action' => 'login'],
+            //'loginRedirect' => ['controller' => 'Accounts', 'action' => 'index '],
+            //'logoutRedirect' => ['controller' => 'Accounts', 'action' => 'login']
+         ]); */
+      
         
 
         /*

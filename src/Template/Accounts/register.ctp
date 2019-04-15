@@ -1,67 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>SB Admin - Login</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Custom styles for this template-->
-  <link href="admin/css/sb-admin.min.css" rel="stylesheet">
-
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<title>My Login Page &mdash; Bootstrap 4 Login Page Snippet</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/my-login.css">
 </head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="assets/img/logo.jpg">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Register</h4>
+							<form method="POST">
+							 
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input id="name" type="text" class="form-control" name="name" required autofocus>
+								</div>
 
-<body class="bg-dark">
+								<div class="form-group">
+									<label for="email">E-Mail Address</label>
+									<input id="email" type="email" class="form-control" name="email" required>
+								</div>
 
-  <div class="container">
-    <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Register</div>
-      <div class="card-body">
-      <?= $this->Form->create(); ?>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="username" id="inputUsername" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
-              <label for="inputUsername">Username</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-              <label for="inputPassword">Password</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required="required">
-              <label for="inputConfirmPassword">Confirm Password</label>
-            </div>
-          </div>
-          
-          <?= $this->Form->submit('Register', array('class' => 'btn btn-primary btn-block')); ?>
-          <?= $this->Form->end(); ?>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="Accounts/register">Register an Account</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-        </div>
-      </div>
-    </div>
-  </div>
+								<div class="form-group">
+									<label for="password">Password</label>
+									<input id="password" type="password" class="form-control" name="password" required data-eye>
+								</div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="admin/vendor/jquery/jquery.min.js"></script>
-  <script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+								<div class="form-group">
+									<label>
+										<input type="checkbox" name="aggree" value="1"> I agree to the Terms and Conditions
+									</label>
+								</div>
 
-  <!-- Core plugin JavaScript-->
-  <script src="admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+								<div class="form-group no-margin">
+									<button type="submit" class="btn btn-primary btn-block">
+										Register
+									</button>
+								</div>
+								<div class="margin-top20 text-center">
+									Already have an account? <a href="index.html">Login</a>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; Your Company 2019
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/my-login.js"></script>
 </body>
-
 </html>

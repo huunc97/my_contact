@@ -35,17 +35,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><?= $this->Html->link('Login', ['controller' => 'Accounts', 'action' => 'login']); ?></li>
-                <li><?= $this->Html->link('Register', ['controller' => 'Accounts', 'action' => 'register']); ?></li>
-            </ul>
-        </div>
     </nav>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
