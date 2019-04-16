@@ -1,109 +1,103 @@
-<!doctype html>
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../..//admin/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../..//admin/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Material Dashboard by Creative Tim</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <!-- Bootstrap core CSS     -->
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../..admin/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../..admin/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Material Dashboard by Creative Tim
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../../admin/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+/head>
 
-    <!--  Material Dashboard CSS    -->
-    <link href="../../admin/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../admin/css/demo.css" rel="stylesheet" />
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-    <div class="wrapper">
+<body class="">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../../admin/img/sidebar-1.jpg">
+        <div class="logo">
+            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                Creative Tim
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="nav-item  ">
+                   <a class="nav-link" href="./dashboard.html">
+                       <i class="material-icons">dashboard</i>
+                       <p>Dashboard</p>
+                   </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="./user.html">
+                    <i class="material-icons">person</i>
+                    <p>User Profile</p>
+                    </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="./tables.html">
+                    <i class="material-icons">content_paste</i>
+                    <p>Groups List</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand" href="#pablo">Groups List</a>
+            </div>
+        </div>
+        </nav>
+        <!-- End Navbar -->
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header" data-background-color="purple">
-                                <h3 class="title">Edit Groups</h3>
-                                <p class="category">Complete your groups</p>
+                            <div class="card-header card-header-primary">
+                                <h3 class="card-title ">Edit Groups</h3>
+                                <p class="card-category"> Information</p>
                             </div>
-                            <div class="card-content">
-                                <?= $this->Form->create($group) ?>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group label-floating">
-                                                <?= $this->Form->input('name',[ 'class'=>"form-control", 'required'=>'required', array('type' => 'text')]); ?>
-                                            </div>
-                                        </div>
+                        <div class="card-body">
+                            <?= $this->Form->create($group) ?>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        <?= $this->Form->input('name',[  'required'=>'required', array('type' => 'text')]); ?>
                                     </div>
-                                    <button type="submit" class="btn btn-primary pull-right">Edit Groups</button>
-                                    <?= $this->Html->link(__('List Groups'), ['controller' => 'Groups', 'action' => 'index']) ?>
-                                    <div class="clearfix"></div>
-                                <?= $this->Form->end() ?>
+                                </div>
                             </div>
-                        </div>
+                            <button type="submit" class="btn btn-primary pull-right" >Edit Groups</button>
+                            <?= $this->Html->link(__('List Groups'), ['controller' => 'Groups', 'action' => 'index']) ?></li>
+                            <div class="clearfix"></div>
+                             <?= $this->Form->end() ?>
+                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../admin/js/core/jquery.min.js"></script>
+  <script src="../../admin/js/core/popper.min.js"></script>
+  <script src="../../admin/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../../admin/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../admin/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+
 </body>
-<!--   Core JS Files   -->
-<script src="../../admin/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="../../admin/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../../admin/js/material.min.js" type="text/javascript"></script>
-<!--  Charts Plugin -->
-<script src="../../admin/js/chartist.min.js"></script>
-<!--  Dynamic Elements plugin -->
-<script src="../../admin/js/arrive.min.js"></script>
-<!--  PerfectScrollbar Library -->
-<script src="../../admin/js/perfect-scrollbar.jquery.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../../admin/js/bootstrap-notify.js"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!-- Material Dashboard javascript methods -->
-<script src="../../admin/js/material-dashboard.js?v=1.2.0"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../../admin/js/demo.js"></script>
 
 </html>
-
-
-
-
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Group $group
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $group->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $group->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Groups'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Group Contacts'), ['controller' => 'Groups', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Group Contact'), ['controller' => 'Groups', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="groups form large-9 medium-8 columns content">
-    <?= $this->Form->create($group) ?>
-    <fieldset>
-        <legend><?= __('Edit Group') ?></legend>
-        <?php
-            echo $this->Form->control('name');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
-</div>

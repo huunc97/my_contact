@@ -23,7 +23,7 @@ class GroupsController extends AppController
         $keyword =$this->request->getQuery('keyword');
         if(!empty($keyword)){
             $this->paginate=[
-                'conditions'=>['name LIKE' =>'%'.$keyword.'%']
+                'conditions'=>['name LIKE' =>'%'.$keyword.'%'],
             ];
         }
         $groups = $this->paginate($this->Groups);
