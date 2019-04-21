@@ -65,9 +65,11 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     //$routes->connect('/login', ['controller' => 'Accounts', 'action' => 'login']);
     //$routes->connect('/register', ['controller' => 'Accounts', 'action' => 'register']);
+    $routes->connect('/groups', ['controller' => 'Groups', 'action' => 'index']);
+
+
     $routes->connect('/contacts', ['controller' => 'Contacts', 'action' => 'index']);
 
-    $routes->connect('/groups', ['controller' => 'Groups', 'action' => 'index']);
 
 
     /**
