@@ -1,0 +1,62 @@
+[
+  {
+    "ID": "6927",
+    "Name": "Chi nh\u00e1nh Ti\u1ec1n Giang",
+    "Phone": "(84-8) 7300-7777",
+    "Fax": "---",
+    "LongLat": "10.4465831,106.3434358",
+    "ProvinceID": "89",
+    "DistrictID": "635",
+    "Address": "2\/4 Qu\u1ed1c l\u1ed9 1A, \u1ea4p R\u1eaby, Th\u1ecb T\u1ea5n T\u00e2n Hi\u1ec7p , Huy\u1ec7n Ch\u00e2u Th\u00e0nh, T\u1ec9nh Ti\u1ec1n Giang.",
+    "BankName": "Mirae Asset",
+    "BankLogo": "\/uploads\/2016\/09\/20\/thebank_logos_1474342021.png"
+  },
+  {
+    "ID": "6928",
+    "Name": "Chi nh\u00e1nh Long An",
+    "Phone": "(84-8) 7300-7777",
+    "Fax": "---",
+    "LongLat": "10.9137749,106.3169479",
+    "ProvinceID": "70",
+    "DistrictID": "411",
+    "Address": "376C, T\u1ec9nh l\u1ed9 10, Khu v\u1ef1c 3, Th\u1ecb tr\u1ea5n \u0110\u1ee9c H\u00f2a, Huy\u1ec7n \u0110\u1ee9c H\u00f2a, T\u1ec9nh Long An.",
+    "BankName": "Mirae Asset",
+    "BankLogo": "\/uploads\/2016\/09\/20\/thebank_logos_1474342021.png"
+  },
+  {
+    "ID": "6929",
+    "Name": "Chi nh\u00e1nh \u0110\u1ed3ng Nai",
+    "Phone": "(84-8) 7300-7777",
+    "Fax": "---",
+    "LongLat": "",
+    "ProvinceID": "53",
+    "DistrictID": "259",
+    "Address": "L\u1ea7u 8, T\u00f2a nh\u00e0 Sonadezi, S\u1ed1 1, \u0111\u01b0\u1eddng s\u1ed1 1, Khu c\u00f4ng nghi\u1ec7p Bi\u00ean H\u00f2a 1, Ph\u01b0\u1eddng An B\u00ecnh, Tp. Bi\u00ean H\u00f2a, \u0110\u1ed3ng Nai (ngay ng\u00e3 ba V\u0169ng T\u00e0u)",
+    "BankName": "Mirae Asset",
+    "BankLogo": "\/uploads\/2016\/09\/20\/thebank_logos_1474342021.png"
+  },
+  {
+    "ID": "6930",
+    "Name": "Chi nh\u00e1nh B\u00ecnh D\u01b0\u01a1ng",
+    "Phone": "(84-8) 7300-7777",
+    "Fax": "---",
+    "LongLat": "10.9308911,106.7111136",
+    "ProvinceID": "45",
+    "DistrictID": "186",
+    "Address": "121 \u0110\u1ea1i L\u1ed9 B\u00ecnh D\u01b0\u01a1ng, Ph\u01b0\u1eddng Ph\u00fa Th\u1ecd, Th\u1ee7 D\u1ea7u M\u1ed9t, B\u00ecnh D\u01b0\u01a1ng, Vi\u1ec7t Nam",
+    "BankName": "Mirae Asset",
+    "BankLogo": "\/uploads\/2016\/09\/20\/thebank_logos_1474342021.png"
+  },
+  {
+    "ID": "6931",
+    "Name": "Chi nh\u00e1nh H\u1ed3 Ch\u00ed Minh",
+    "Phone": "(84-8) 7300-7777",
+    "Fax": "84-8-6299-0894",
+    "LongLat": "",
+    "ProvinceID": "33",
+    "DistrictID": "49",
+    "Address": "L\u1ea7u 1, S\u00e0i G\u00f2n Royal, 91 Pasteur, Ph\u01b0\u1eddng B\u1ebfn Ngh\u00e9, Qu\u1eadn 1, TP.HCM, Vi\u1ec7t Nam",
+    "BankName": "Mirae Asset",
+    "BankLogo": "\/uploads\/2016\/09\/20\/thebank_logos_1474342021.png"
+  }
+]

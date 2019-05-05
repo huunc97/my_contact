@@ -29,9 +29,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
+
+  </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper ">
   <header class="main-header">
@@ -117,6 +116,25 @@
             <!-- /.box-header -->
               <div class="box-body">
                 <div class="col-xs-8">
+                <form>
+                      <?php
+                          $dir="./bank/branches";
+                          if(is_dir($dir)){
+                            if($dh =opendir($dir)){
+                              while (($file = readdir($dh)) !== false){
+                                if($file != '.' and $file != '..'){
+                                  echo "flie: ".$file .'<br>';
+                                  $chuoi =file_get_contents("./bank/banks.json");
+                                  $chuoi_json = json_decode($chuoi,true);
+                                  print_r($chuoi_json);
+                                  echo "<br>---------------------<br>" ;
+                                }
+                              }
+                            closedir($dh) ;
+                            }
+                          }  
+                       ?>
+                </form>
                     <form action="#" data-parsley-validate novalidate>
                       <div class="form-group col-md-7">
                         <label for="userName">Fist Name<span class="text-danger">*</span></label>
@@ -146,6 +164,25 @@
                             <textarea required class="form-control" placeholder="VD:174 Lê Trọng Tấn, Tân Phú, TP.HCM" id="ipAddress"></textarea>
                             <p style="color:red" id="errorAddress"></p>
                           </div>
+                      </div>
+                      <div class="form-group col-md-7">
+                          <label for="Bank">Ngân hàng<span class="text-danger"></span></label>
+                          <form>
+                          <select name="Bank" id="userBark" class="form-control">
+                          <?php
+                              $a= file_get_contents("../webroot/bank/banks.json");
+                              $b=json_decode($a);
+                              foreach ($b as $key=>$value) {
+                                  echo "<option value=$key>$value</option>";
+                              }
+                           ?>
+                         </select>
+                         </form>
+                      </div>
+                      <div class="form-group col-md-7">
+                         <label for="bankBranch">Chi nhánh ngân hàng<span class="text-danger"></span></label>
+                          <input type="text" name="nick" data-parsley-trigger="change" required placeholder="Last name" class="form-control" id="lastName">
+                          <p style="color:red" id="errorLastName"></p>
                       </div>
                       <div class="form-group  col-md-3">
                           <button class="btn btn-primary" type="submit">
@@ -224,10 +261,11 @@
           if(fistName.value.trim()=='')
           {
             $("#errorFistName").show();
-            errorFistName.innerHTML=`Vui lòng điền fist name`          }
-          else{
-            $("#errorFistName").hide();
+            errorFistName.innerHTML=`Vui lòng điền fist name`
+            $("#fistName").focus();
           }
+          else{
+            $("#errorFistName").hide();          }
 
           if(lastName.value.trim()=='')
           {

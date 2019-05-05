@@ -45,12 +45,22 @@ class CreateContacts extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
+        $table->addColumn('bank_id', 'string', [
+            'default' => null,
+            'limit' => 100,
+            'null' => false,
+        ]);
         $table->addColumn('bank_branch_id', 'string', [
             'default' => null,
             'limit' => 100,
             'null' => false,
         ]);
         $table->addColumn('bank_account_id', 'string', [
+            'default' => null,
+            'limit' => 100,
+            'null' => false,
+        ]);
+        $table->addColumn('bank_account_name', 'string', [
             'default' => null,
             'limit' => 100,
             'null' => false,
