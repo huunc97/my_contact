@@ -116,25 +116,6 @@
             <!-- /.box-header -->
               <div class="box-body">
                 <div class="col-xs-8">
-                <form>
-                      <?php
-                          $dir="./bank/branches";
-                          if(is_dir($dir)){
-                            if($dh =opendir($dir)){
-                              while (($file = readdir($dh)) !== false){
-                                if($file != '.' and $file != '..'){
-                                  echo "flie: ".$file .'<br>';
-                                  $chuoi =file_get_contents("./bank/banks.json");
-                                  $chuoi_json = json_decode($chuoi,true);
-                                  print_r($chuoi_json);
-                                  echo "<br>---------------------<br>" ;
-                                }
-                              }
-                            closedir($dh) ;
-                            }
-                          }  
-                       ?>
-                </form>
                     <form action="#" data-parsley-validate novalidate>
                       <div class="form-group col-md-7">
                         <label for="userName">Fist Name<span class="text-danger">*</span></label>
@@ -165,7 +146,7 @@
                             <p style="color:red" id="errorAddress"></p>
                           </div>
                       </div>
-                      <div class="form-group col-md-7">
+                      <div class="form-group col-md-6">
                           <label for="Bank">Ngân hàng<span class="text-danger"></span></label>
                           <form>
                           <select name="Bank" id="userBark" class="form-control">
@@ -179,12 +160,13 @@
                          </select>
                          </form>
                       </div>
-                      <div class="form-group col-md-7">
+                      <div class="form-group col-md-6">
                          <label for="bankBranch">Chi nhánh ngân hàng<span class="text-danger"></span></label>
-                          <input type="text" name="nick" data-parsley-trigger="change" required placeholder="Last name" class="form-control" id="lastName">
-                          <p style="color:red" id="errorLastName"></p>
+                         <select name="" id="branches" class="form-control">
+                         
+                         </select>
                       </div>
-                      <div class="form-group  col-md-3">
+                      <div class="form-group  col-md-12">
                           <button class="btn btn-primary" type="submit">
                              Cập nhật
                           </button>
@@ -265,18 +247,18 @@
             $("#fistName").focus();
           }
           else{
-            $("#errorFistName").hide();          }
+            $("#errorFistName").hide();         
+           }
 
-          if(lastName.value.trim()=='')
+           if(lastName.value.trim()=='')
           {
             $("#errorLastName").show();
             errorLastName.innerHTML=`Vui lòng điền last name`
-
           }
           else{
             $("#errorLastName").hide();
           }
-
+          
           if(gender.value.trim()=='')
           {
             $("#errorGender").show();
@@ -303,11 +285,30 @@
           else{
             $("#errorAddress").hide();
           }
-
-      }
-
-      
+      }      
   </script>
-
+<script>
+  $(document).ready(function () {
+    //userBark.change();
+    userBark.onchange=()=>{
+      branches.innerHTML=``;
+      $.ajax({
+      url: window.location.origin+"/my_contact/contacts/test",
+      type: "GET",
+      data: {"id_bank":userBark.value},
+      success: (data) => {
+        data=JSON.parse(data);
+        data=JSON.parse(data);
+        data.forEach(row => {
+          branches.innerHTML+=`
+            <option value=${row.ID}>${row.Name}</option>
+          `
+        });
+      }
+    })
+    }
+    $("#userBark").change();
+});
+</script>
 </body>
 </html>

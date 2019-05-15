@@ -113,4 +113,6 @@ class ContactsController extends AppController
 
     public function user()
     {}
+        public function test()
+    {}
 }
