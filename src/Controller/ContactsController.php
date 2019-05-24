@@ -115,4 +115,6 @@ class ContactsController extends AppController
     {}
         public function test()
     {}
+        public function api()
+        {}
 }
